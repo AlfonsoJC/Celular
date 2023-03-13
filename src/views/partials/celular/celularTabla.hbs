@@ -1,0 +1,47 @@
+{{#if celular}}
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr>
+        <th>Num.</th>
+        <th>Clave</th>
+        <th>Marca</th>
+        <th>Precio</th>
+        <th>FechaLanzamiento</th>
+        <th>Ram</th>
+        <th>Almacenamiento</th>
+        <th>CantCamaras</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each celular}}
+        <tr>
+          <td>{{@index}}</td>
+          <td>{{clave}}</td>
+          <td>{{marca}}</td>
+          <td>{{precio}}</td>
+          <td>{{fechaLanzamiento}}</td>
+          <td>{{ram}}</td>
+          <td>{{almacenamiento}}</td>
+          <td>{{cantCamaras}}</td>
+          <td>
+            {{#if opcion}}
+              <a href="/status/{{_id}}" class="btn btn-warning">No disponible</a>
+            {{else}}
+              <a href="/status/{{_id}}" class="btn btn-success">Disponible</a>
+            {{/if}}
+            <a href="/update/{{_id}}" class="btn btn-info">Editar</a>
+            <a href="/delete/{{_id}}" class="btn btn-danger">Eliminar</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No hay celulares</h1>
+      <img src="/icons/analisis.png" class="w-75" />
+    </div>
+  </div>
+{{/if}}

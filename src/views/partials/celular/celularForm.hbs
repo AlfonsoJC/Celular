@@ -1,0 +1,41 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+<h1>Celular</h1>
+<form action="/celular/agregar" method="POST">
+    <div>
+      <label for="nombre">Escribe tu Clave:</label>
+      <input type="text" name="clave" placeholder="Clave" id="clave" class="form-control bg-dark text-white"/>
+    </div>
+    <div>
+      <label for="marca">Escribe Marca:</label>
+      <input type="text" name="marca" placeholder="Marca" id="marca" class="form-control bg-dark text-white"/>
+    </div>
+    <div>
+      <label for="precio">Escribe Precio:</label>
+      <input type="text" name="precio" placeholder="precio" id="precio" class="form-control bg-dark text-white"/>
+    </div>
+    <div>
+      <label for="fechaLanzamiento">Selecciona Fecha:</label>
+      <input type="date" name="fechaLanzamiento" placeholder="12/01/0000" id="fechaLanzamiento" class="form-control bg-dark text-white"/>
+    </div>
+    <div>
+      <label for="ram">seleciona ram:</label>
+         <select name="ram"id="ram" class="form-control bg-dark text-white">
+         <option value="">Capacidad:</option>
+         <option value="2">2</option>
+         <option value="4">4</option>
+         <option value="8">8</option>
+         <option value="16">16</option>
+         <option value="32">32</option>
+      </select>
+    </div>
+    <div>
+      <label for="almacenamiento">Escribe el almacenamiento:</label>
+      <input type="number" name="almacenamiento" placeholder="almacenamiento" id="almacenamiento" class="form-control bg-dark text-white"/>
+    </div>
+    <div>
+      <label for="cantCamaras">Cantidad de camaras:</label>
+      <input type="text" name="cantCamaras" placeholder="cantCamaras" id="cantCamaras" class="form-control bg-dark text-white"/>
+    </div>
+    <button  class="btn btn-success btn-sm mt-2">Agregar</button> 
+</form>
+</div>
